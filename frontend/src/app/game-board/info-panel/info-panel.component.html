@@ -19,6 +19,7 @@
   <div class="buttons">
     <button (click)="room.generateRoom()">New Room</button>
     <button (click)="room.resetGameBoard()" [disabled]="(room.room.gameResult === 'still running')">Restart</button>
+    <button (click)="copyLink()">Invite Player</button>
   </div>
 </div>
 <div class="yourTurn" *ngIf="(room.room.player1Turn && room.playerNr == 1) || (!room.room.player1Turn && room.playerNr == 2)">Your turn!</div>
