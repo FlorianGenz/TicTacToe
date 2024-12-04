@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.fgenz.tictactoebackend.TictactoeBackendApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.879 s - in de.fgenz.tictactoebackend.TictactoeBackendApplicationTests

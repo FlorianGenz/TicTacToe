@@ -1,0 +1,24 @@
+<div class="infoPanel">
+  <div class="players">
+    <div class="playerName" [style.background-color]="room.room.playerJoined[0] ? '#78D76A' : 'gray'">
+      <div class="playerWins">{{room.room.playerWins[0].toString()}}</div>
+      <input #player1 [value]="room.room.player1Name || 'Player1'" maxlength="15"
+             (change)="room.changePlayerName('player1', player1.value)"
+             [style.pointer-events]="(room.playerNr == 1) ? 'auto' : 'none'"
+             [style.font-weight]="room.room.player1Turn ? 'bolder' : 'normal'">
+    </div>
+    <div>vs</div>
+    <div class="playerName" [style.background-color]="room.room.playerJoined[1] ? '#78D76A' : 'gray'">
+      <div class="playerWins">{{room.room.playerWins[1].toString()}}</div>
+      <input #player2 [value]="room.room.player2Name || 'Player2'" maxlength="15"
+             (change)="room.changePlayerName('player2', player2.value)"
+             [style.pointer-events]="(room.playerNr == 2) ? 'auto' : 'none'"
+             [style.font-weight]="!room.room.player1Turn ? 'bolder' : 'normal'">
+    </div>
+  </div>
+  <div class="buttons">
+    <button (click)="room.generateRoom()">New Room</button>
+    <button (click)="room.resetGameBoard()" [disabled]="(room.room.gameResult === 'still running')">Restart</button>
+  </div>
+</div>
+<div class="yourTurn" *ngIf="(room.room.player1Turn && room.playerNr == 1) || (!room.room.player1Turn && room.playerNr == 2)">Your turn!</div>

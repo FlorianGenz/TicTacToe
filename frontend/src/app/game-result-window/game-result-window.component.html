@@ -1,0 +1,3 @@
+<div class="message" *ngIf="room.room.gameResult === 'player1'" [@slideInOut]=""><div class="playerName">{{room.room.player1Name || 'Player1'}}</div> WON!</div>
+<div class="message" *ngIf="room.room.gameResult === 'player2'" [@slideInOut]=""><div class="playerName">{{room.room.player2Name || 'Player2'}}</div> WON!</div>
+<div class="message" *ngIf="room.room.gameResult === 'draw'" [@slideInOut]="">DRAW</div>

@@ -1,0 +1,47 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background: url("assets/background.png") bottom;
+  font-family: Helvetica, serif;
+}
+
+button{
+  background-color: #78D76A;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+button:hover:enabled{
+  cursor: pointer;
+  color: #78D76A;
+  background-color: white;
+  border: 1px solid #78D76A;
+}
+
+button:disabled{
+  background-color: #a1d79c;
+}
+
+button:disabled:hover{
+  cursor: not-allowed;
+}
+
+dialog{
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px gainsboro;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 300px;
+}
+dialog::backdrop{
+  background: rgba(0, 0, 0, 1);
+}

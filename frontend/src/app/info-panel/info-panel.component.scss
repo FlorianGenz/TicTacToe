@@ -1,0 +1,49 @@
+.infoPanel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.players{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: gray;
+}
+
+.playerName{
+  width: 100px;
+  padding: 5px 10px;
+  transition: background-color 0.1s ease-in-out;
+  border-radius: 5px;
+  position: relative;
+}
+
+.playerWins{
+  position: absolute;
+  top: -5px;
+  z-index: 5;
+  background-color: white;
+  color: #78D76A;
+  padding: 2px 5px;
+  border-radius: 8px;
+  text-align: center;
+  left: 103px;
+  font-size: 12px;
+  border: 1px solid #78D76A;
+}
+
+.buttons{
+  display: flex;
+  gap: 10px;
+}
+
+.yourTurn{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: gray;
+}

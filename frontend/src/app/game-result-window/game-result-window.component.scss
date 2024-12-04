@@ -1,0 +1,17 @@
+.message {
+  position: absolute;
+  top: 50px;
+  font-size: 40px;
+  color: gray;
+  font-weight: lighter;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.playerName{
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
