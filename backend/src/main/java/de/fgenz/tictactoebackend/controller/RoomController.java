@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/backend/room/")
-@CrossOrigin(origins = {"https://tictactoe.floriangenz.de"})
+@CrossOrigin(origins = {"https://tictactoe.floriangenz.de", "https://floriangenz.de", "localhost:4200", "localhost:8080"})
 public class RoomController {
     private final List<Room> roomList;
     private final List<String> loggedInIps;
@@ -23,7 +23,7 @@ public class RoomController {
     @GetMapping("/rooms")
     public List<Room> getAllRooms(HttpServletRequest request) {
         System.out.println("all rooms were requested");
-        if (roomList.size() == 0) {
+        if (roomList.isEmpty()) {
             roomList.add(new Room(1));
         }
         if (loggedInIps.contains(request.getRemoteAddr())){
